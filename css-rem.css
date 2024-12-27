@@ -1,0 +1,441 @@
+@charset "iso-8859-1";
+
+body{
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  margin-bottom: 5.0%;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  margin-top:4%;
+  color: #420000;
+ background:#fff0c3; /* For browsers that do not support gradients ffe0b3 */
+   
+
+background-image:url('images/background-pic-mandoguitar.png');
+background-repeat:no-repeat;
+background-position:top;
+background-attachment: fixed;
+background-position:center;
+background-attachment: fixed;
+background-size:contain;
+/*-webkit-background-size: 1200px 768px;
+       /*background: linear-gradient(to right, #82a7a8, #476165, #816f58, #c5b287);/*   Standard syntax (must be last) */
+
+/*background: linear-gradient(silver, black);*/
+
+}
+
+* {
+    box-sizing: border-box;
+
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 10px
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+
+
+li {
+    list-style:none;
+}
+  /* UTILITIES */
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+  
+
+  /* NAVBAR STYLING STARTS */
+  /* Links inside the navbar */
+.navbar {
+  display: block;
+
+  justify-content:center;
+  padding: 10px;
+  background-color: rgb(210, 105, 30);
+  color: #000;
+  font-size: 110%;
+  font-weight: bold;
+  
+}
+
+.navbar a {
+  color: #fff;
+  text-align: center;
+}
+
+/* LOGO */
+.logo {
+  font-size: 32px;
+}
+
+/* NAVBAR MENU */
+.menu {
+  display: flex;
+  gap: 1em;
+  font-size: 100%;
+}
+
+.menu li:hover {
+  background-color: coral;
+  border-radius: 0px;
+  transition: 0.3s ease;
+  
+}
+
+.menu li {
+  padding: 0px 14px;
+}
+
+/* DROPDOWN MENU */
+.services {
+  position: relative; 
+}
+
+.dropdown {
+  background-color: orange;
+  padding: 1em 0;
+  position: absolute; /*WITH RESPECT TO PARENT*/
+  display: none;
+  border-radius: 0px;
+    right:0%;
+  top: 15px;
+}
+
+.dropdown li + li {
+  margin-top: 12px;
+}
+
+.dropdown li {
+  padding: 0.5em 1em;
+
+  width: 12em;
+  text-align: center;
+}
+
+.dropdown li:hover {
+  background-color: coral;
+  color:white;
+}
+
+.services:hover .dropdown {
+  display: block;
+}
+
+/* CHECKBOX HACK */
+
+input[type=checkbox] {
+  display: none;
+} 
+
+/* HAMBURGER MENU */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+}
+
+/* APPLYING MEDIA QUERIES ONLY WORKS ON HAMBURGERED MENU*/
+@media (max-width: 768px) {
+ .menu {
+    display:none;
+    position: relative;
+   background-color:coral;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 0 0;
+    color:white;
+  }
+
+  .menu li:hover {
+    display: block;
+    background-color:#333;
+    color:red;
+    transition: 0.75s ease;
+  }
+
+  .menu li + li {
+    margin-top: 12px;
+
+  }
+
+  input[type=checkbox]:checked ~ .menu {
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .dropdown {
+   right: 100%;
+    top: 10px;
+    transform: translateX(0%);
+  }
+
+  .dropdown li:hover {
+    background-color: black;
+    color: white;
+    font-size: 100%;
+    font-weight: bold;
+  }
+}
+
+/* AND THAT'S IT FOR THE NAV LINKS DESIGN
+	ACTUAL LINKS TAKEN CARE OF A JS CALLED ON HTML PAGE */
+
+/* BOXES AND HOLDERS */
+
+.section-0 { /* white transparent almost */
+    background-color: rgba(255,255,255,.1);
+    padding:1.0%;
+    font-size:100%;
+    color: white;
+}
+
+.section-1 { /* FLESH */
+  	background-color: rgba(255,90,70,.4);
+    padding:1.0%;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.24);
+    font-size: 100%;
+    color: #000064;
+}
+
+.section-2 {  /* BLUISH */
+  	background-color: rgba(97,113,196,.4);
+    padding:1.0%;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.24);
+    font-size: 100%;
+    color: #000064;
+
+}
+
+.section-3 { /*YELLOW*/
+  	background-color: rgba(255,200,0,.4);
+    padding:1.0%;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.24);
+    font-size: 100%;
+    color: #2c2c2c;
+
+}
+
+.section-4 { /* PLUM */
+  	background-color: rgba(115,0,120,.4);
+    padding:1.0%;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.24);
+    font-size: 100%;
+    color: #005300;
+
+}
+
+.Sbg {/*background-color: rgba(250, 240, 230,.0);*/
+    -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
+          page-break-inside: avoid; /* Firefox */
+               break-inside: avoid; /* IE 10+ */
+}
+
+.box-call-to-action {
+    background-color: #fcfcfc;
+    padding: 1.0%;
+    color: #222222;
+    line-height:170%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.24), 0 2px 4px rgba(0,0,0,0.48);
+}
+
+.box-notice {
+  	background-color: rgba(150,80,0,.5);
+    padding:1.0%;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.24);
+    font-size: 100%;
+
+}
+
+.box-popup-lite {
+  	background-color: rgba(200,100,0,.4);
+    padding:1.0%;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    font-size: 120%;
+
+	
+	    
+}
+/*.box-nav-links {
+	background-color: rgb(210, 105, 30);
+	padding:0.0%;
+	box-shadow: 0 1 px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);*/
+
+
+}  
+
+/*.footer {
+   background-color: rgba(250, 240, 230);
+    color: #222;
+    text-align: center;
+    font-size: 80%;
+    padding: 1%;
+     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}*/
+
+.toprow {
+	padding:0%;
+}
+
+.hr {
+  color: coral;
+  background-color: salmon;
+  width: 70%;
+  height: 4px;
+}
+.br {
+    clear: both;
+}
+
+html {
+    font-family: Avenir, sans-serif;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+.lineclear{
+	clear:left;
+	height:10px;
+}
+
+
+.video-container {
+	position:relative;
+	padding-bottom:56.25%;
+	padding-top:30px;
+	height:0;
+	overflow:hidden;
+}
+
+.video-container iframe, .video-container object, .video-container embed {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+
+.rotateimg10 {
+  -webkit-transform:rotate(5deg);
+  -moz-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  -o-transform: rotate(5deg);
+  transform: rotate(5deg);
+}
+
+.rotateimg350 {
+  -webkit-transform:rotate(355deg);
+  -moz-transform: rotate(355deg);
+  -ms-transform: rotate(355deg);
+  -o-transform: rotate(355deg);
+  transform: rotate(355deg);
+}
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width:100%;
+   font-size: 80%;
+   background-color: none;
+   color: #aaaaaa;
+   text-align: center;
+    z-index:-1;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index:1;
+}
+
+.frontpagehead {font:bold italic 300%/150%  "arial", "sans serif";}
+.pagehead {font:bold 230%/150%  "georgia", "serif";}
+.deckhead{font:bold italic 190%/150% "Georgia","serif" ;}
+.graphhead{font:bold 170%/120% "Georgia", "serif";}
+.cutline{font: 80%/130% "helvetica","sans serif";}
+
+p{font: 100%/150% arial, "sans serif";}
+.p-small{font:80%/130% "arial","sans serif";}
+.p{font: 100%/150% arial, "sans serif";}
+.p-sitenav-white{font:bold 80%  "arial";color:#ffffff;}
+.p-big{font: 120%/150% arial, "sans serif";}
+.p-serif{font:100%/120% "times new roman", "serif";}
+
+.blue{color:#0000ff;}
+.white{color:#ffffff;}
+.green{color:darkgreen;}
+.red{color:maroon;}
+
+.agate{font:80%/1.5 "arial";}
+
+a:link{color:#318cb8;text-decoration: underline;}
+a:visited{color:#318cb8;text-decoration: underline;}
+a:active{color:#664466;}
+a:hover{color:#909090; text-decoration: none;}
+/*8b640b*/
+a.green:link{color:#00ff00;}
+a.white:link {color:#ffffff;text-decoration: none;}
+a.white:visited{color:#ffffff;text-decoration: none;}
+a.white:active{color:black;}
+a.white:hover{color:#a66c08;text-decoration:underline;background-color:#ffca66;}
+a.oppo:link {color:#429dc9;text-decoration: underline;}
+a.oppo:visited {color:#207ba7; text-decoration: underline;}
+a.oppo:active{color:#664466;}
+a.oppo:hover{color:#aacccc; text-decoration: none;}
+
+[class*="col-"] {
+    float: left;
+    padding: 1%;
+}
+
+/* For mobile phones-up to 768px screen displays 1 column */
+[class*="col-"] {
+    width: 100%;
+}
+@media only screen and (min-width: 766px) { 
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
